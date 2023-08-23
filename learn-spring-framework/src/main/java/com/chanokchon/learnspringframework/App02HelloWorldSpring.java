@@ -15,7 +15,7 @@ public class App02HelloWorldSpring {
 		 */
 		var context = new AnnotationConfigApplicationContext(HelloWorldConfiguration.class);
 
-		// 2: ระบุ @Configuration
+		// 2: ระบุ @Configuration ที่ต้องการให้ Spring จัดการ ในตัวอย่างคือ HelloWorldConfig
 		
 		// 3: ดึงข้อมูลที่จัดการโดย spring
 		System.out.println(context.getBean("name"));; // อะไรก็ตามที่ถูกจัดการโดย Spring bean เราสามารถระบุชื่อเพื่อเข้าถึงได้

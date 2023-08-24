@@ -1,0 +1,12 @@
+
+    Spring
+        - พัฒนาแบบ lightweight ด้วย java pojo (Pain-Old-Java-Object)
+        - ใช้ Dependency Injection เพื่อทำให้แอพพลิเคชันเป็นแบบ loose coupling
+        - ลด java code ให้ได้มากที่สุด
+
+    Core Container
+        - 
+        - Beans
+        - Core 
+        - SpEL
+        - Context

@@ -1,0 +1,28 @@
+    Spring boot Project Structure
+        > src/main/java 
+            - java code ของเรา 
+        > src/main/resource
+            - config file ของแอพเรา
+            > /static
+                - ค่าเริ่มต้นของ spring boot จะโหลด static resource จากที่นี่
+                - จัดเก็บ html, css, js, image
+            > /templates
+                - spring boot มี template หลายรูปแบบให้ใช้ เช่น FreeMarker, Thymeleaf, Mustache
+        > src/test/java
+            - java code ที่ใช้ทำ unit testing
+        > mvnw
+            - maven wrapper file ทำให้เรารันโปรเจค maven โดยไม่ต้องติดตั้ง maven
+
+    Maven Project Structure
+        > src/main/java
+            - java code ของเรา
+        > src/main/resource
+            - config file ของแอพเรา
+        > src/main/webapp
+            - จัดเก็บ JSP file, web config, web assets (images, css, js, etc)
+        > src/test
+            - สำหรับเก็บไฟล์ทดสอบ (Unit testing)
+        > target
+            - ไฟล์ source code ของเราที่ถูก compile แล้ว
+        > pom.xml
+            - ไฟล์สำหรับกำหนดค่า maven

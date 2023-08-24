@@ -1,0 +1,36 @@
+
+    MAVEN
+        ทำหน้าที่ติดตั้ง Dependencies ให้กับเราโดยอัตโนมัติ โดยไฟล์ Dependencies จะอยู่ในรูปแบบของ .jar
+
+    * จัดการ Dependencies
+        - อ่าน config file
+        - ตรวจสอบว่ามีใน Local repository แล้วหรือยัง
+            - ถ้ามีแล้ว จะดึงจาก local มาใช้
+            - ถ้ายังไม่มี จะไปโหลดมาจาก Maven central repository
+        - build and run application
+
+    * Building and Running
+        เมื่อเราทำการ build และ run แอพของเรา maven จะจัดการ class และ build path ให้
+
+    * POM File - pom.xml
+        Project Object Model file
+            - configuration ของโปรเจ็คของเรา
+            - รายการ Dependencies จาก maven ที่เราใช้
+        โดยมีโครงสร้างของไฟล์ คือ
+            > project meta data
+                - project name
+                - version
+                - output file type (JAR, WAR)
+            > dependencies 
+                - รายการ dependencies ที่เราใช้บน Spring
+            > plug ins
+                - Additional custom tasks to run
+
+    * project coordinates
+        > Group ID
+            - ชื่อของบริษัท, กลุ่ม
+        > Artifact ID
+            - ชื่อของโปรเจค
+        > Version 
+            - version ของโปรเจคของเรา
+            - SNAPSHOT หมายถึง เวอร์ชันที่กำลังพัฒนาอย่างแข็งขัน

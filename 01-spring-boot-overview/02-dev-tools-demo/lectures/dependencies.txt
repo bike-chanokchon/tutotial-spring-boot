@@ -1,0 +1,30 @@
+
+    Spring Boot Starters
+        - รวมรวม dependencies เริ่มต้นให้
+    
+    Spring Boot Devtools
+        - restart ให้เมื่อมีการเปลี่ยนแปรง
+        
+    Spring boot actuator
+    	- ช่วยให้เราสามารถ monitor และ manage spring boot application ของเราได้ง่าย ๆ
+    	- endpoint: /actuator 
+    		- สามารถเปิด endpoint ทั้งหมดได้ด้วย management.endpoints.web.exposure.include=*
+    		- /health 
+    			- ใช่ตรวจสอบว่า web application ทำงานอยู่หรือไม่
+    		- /info
+    			- ให้ข้อมูลเพิ่มเติมเกี่ยวกับ application
+    			- สามารถตั้งต่าให้เปิดหรือปิดได้ที่ application.properties โดยตั้งค่า manage.info.env.enabled=true
+    			  เพื่อเปิด info
+    			- ใช้ application.properties เพื่อเก็บข้อมูลที่จะใช้ response ใน info เช่น
+    				- info.app.name=AdopPix
+    				- info.app.description=A crazy and fun app, yoohoo!
+    				- info.app.version=1.0.0
+    		- /auditevents
+    			- audit event for your application
+    		- /beans
+    			- แสดงรายการ beans ทั้งหมดที่ถูกจัดการโดย spring
+    		- /mappings
+    			- แสดงรายการ @RequestMapping path ทั้งหมด
+    				
+    				
+    				

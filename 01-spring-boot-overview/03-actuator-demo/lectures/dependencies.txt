@@ -9,6 +9,7 @@
     	- ช่วยให้เราสามารถ monitor และ manage spring boot application ของเราได้ง่าย ๆ
     	- endpoint: /actuator 
     		- สามารถเปิด endpoint ทั้งหมดได้ด้วย management.endpoints.web.exposure.include=*
+    		- สามารถสั่งให้ปิด endpoint ที่ระบุได้เมื่อเราทำการ * ด้วย management.endpoints.web.exposure.exclude=health,info
     		- /health 
     			- ใช่ตรวจสอบว่า web application ทำงานอยู่หรือไม่
     		- /info
@@ -27,6 +28,12 @@
     			- แสดงรายการ @RequestMapping path ทั้งหมด
     		- /threaddump
     			- แสดงรายการ threads ที่ใช้
+    			
+    Spring boot starter security
+    	- Enable Spring security
+    	- สามารถตั้งค่า user, password ที่จะให้ผู้ใช้ ๆ ได้ใน application.properties
+    		- spring.security.user.name=scott
+    		- spring.security.user.password=tiger
     				
     				
     				

@@ -1,8 +1,0 @@
-
-	Loosely Coupled Java Code
-	- ไม่จำเป็นต้องเปลี่ยนแปรง code ใด ๆ ใน class หลัก เมื่อเราต้องการที่จะส่งการทำงานจาก class หนึ่งหรืออีก 
-	  class หนึ่ง
-	  
-	
-	Wiring of Dependencies
-	- ตัวอย่างเช่น class A จะทำงานให้เสร็จสมบูรณ์ได้ จำเป็นต้องพึ่งพา class B

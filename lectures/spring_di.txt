@@ -1,0 +1,34 @@
+
+    Spring dependency injection
+        มีหน้าที่จัดหา dependencies ที่ object ต้องใช้
+        เช่น
+            - ต้องการสร้างรถยนต์ จะต้องประกอบด้วย
+                - เครื่องยนต์
+                - ประตู
+                - กระจกลม
+        จากนั้นรวมทุกอย่างเข้าด้วยกันแล้วส่งให้กับผู้ที่ร้องขอ
+
+
+        * Spring มี injection types หลายแบบ
+            - Constructor injection
+                - ใช่เมื่อ object จำเป็นต้องมี dependencies ตัวที่ระบุ
+                - ถูกแนะนำให้ใช้วิธีนี้โดย spring.io
+            - Setter injection
+                - optional dependencies
+
+        * Spring auto wiring
+            - สำหรับ dependency injection, spring สามารถใช้งาน auto wiring ได้
+            - spring จะมองหา class/interface ที่เข้ากัน
+            - จากนั้นจะฉีด object เข้าไปให้อัตโนมัติ
+            - โดยมีขั้นตอนการมองหา คือ 
+                - spring จะมองหา @Components ที่อยู่ใน class
+                - จากนั้นมองหาว่ามี @Components ไหนต้องการ dependencies หรือไม่
+                - ทำการฉีด dependencies ที่ @Components นั้นต้องการเข้าไป
+
+        @Components
+            - ระบุว่า class นั้นเป็น spring beans
+                - spring bean เป็น class ปกติที่ถูกจัดการโดย spring
+            - ทำให้ class พร้อมสำหรับการทำ dependencies injection
+
+        @Autowired
+            - บอกกับ spring ว่าต้องการ dependencies และให้ spring ฉีด dependencies ให้อัตโนมัติ

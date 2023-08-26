@@ -1,0 +1,16 @@
+
+    Inversion of control (IoC)
+
+    * Spring container เป็น object factory
+        - ถ้าเราร้องขอ object จาก spring
+        - spring จะมองหา object ที่เราสร้างไว้ใน configuration
+        - จากนั้นส่งคืน reference ของ object ให้กับเรา
+
+    * Spring container มีฟังก์ชันหลักอยู่ 2 ฟังก์ชัน คือ
+        - สร้างและจัดการกับ object (Inversion of control)
+        - ฉัดการพึ่งพา (Dependency Injection)
+
+    * เราสามารถกำหนดค่าให้กับ Spring container ได้ด้วย
+        - XML configuration file
+        - Java annotations (recommended)
+        - Java source code (recommended)

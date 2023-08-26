@@ -1,0 +1,20 @@
+
+    Component Scanning
+        - spring จะตรวจหา class java ที่มี special annotations เช่น @Component, @Autowired
+        - จากนั้นจะนำมาลงทะเบียนใน Spring container แล้ว class นั้นก็กลายเป็น Spring beans
+
+    @SpringBootApplication
+        - auto configuration
+        - component scanning
+        - additional configuration
+
+    * โดยปกติ spring จะ scan แค่ package หลักเท่านั้น
+    * ถ้าหากเราสร้าง package อื่นขึ้นมา เราสามารถบอกให้ spring ไป scan มาได้
+    @SpringBootApplication(
+        scanBasePackage={
+            "com.luv2code.springcoredemo",
+            "com.luv2code.util",
+            "com.acme.cart",
+            "edu.cmu.srs"
+        }
+    )

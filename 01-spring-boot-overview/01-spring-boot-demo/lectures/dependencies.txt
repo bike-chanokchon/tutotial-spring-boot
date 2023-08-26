@@ -1,6 +1,0 @@
-
-    Spring Boot Starters
-        - รวมรวม dependencies เริ่มต้นให้
-    
-    Spring Boot Devtools
-        - restart ให้เมื่อมีการเปลี่ยนแปรง

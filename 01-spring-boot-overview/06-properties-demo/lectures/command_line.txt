@@ -1,9 +1,0 @@
-
-    mvn package
-        - แปรง project เป็น JAR file ใน Target folder
-    
-    java -jar [jar file].jar
-        - สั่งให้ compile file .jar
-
-    mvn spring-boot:run
-        - run spring boot project

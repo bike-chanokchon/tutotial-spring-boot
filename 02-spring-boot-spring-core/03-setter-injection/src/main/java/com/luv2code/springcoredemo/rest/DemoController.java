@@ -12,8 +12,13 @@ public class DemoController {
     private Coach myCoach;
 
     // define a constructor for dependency injection
-    @Autowired // ถ้าหากมีแค่ 1 constructor จะใส่หรือไม่ใส่ก็ได้
-    public DemoController(Coach theCoach) {
+    // @Autowired // ถ้าหากมีแค่ 1 constructor จะใส่หรือไม่ใส่ก็ได้
+    // public DemoController(Coach theCoach) {
+    //     this.myCoach = theCoach;
+    // }
+
+    @Autowired
+    public void setCoach(Coach theCoach) {
         this.myCoach = theCoach;
     }
 

@@ -20,3 +20,7 @@
             - ไม่จำเป็นต้องใส่ก็ได้ เพราะ java field จะทีชื่อเดียวกับ column ใน db อยู่แล้ว
         > @GeneratedValue(strategy=GenerationType.IDENTITY)
             - auto increment
+        > @Transactional
+            - Spring จะจัดการ Transaction control ให้
+        > @Repository
+            - เอาไว้ให้ใส่กับ class ที่เป็น DAO ในส่วนของการ implement

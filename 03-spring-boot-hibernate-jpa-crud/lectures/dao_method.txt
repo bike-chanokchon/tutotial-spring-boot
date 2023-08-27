@@ -1,0 +1,8 @@
+
+    method should have
+        - save
+        - findById
+        - findAll
+        - update
+        - delete
+        - deleteAll

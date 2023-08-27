@@ -1,0 +1,13 @@
+
+    Lazy Initialization
+        โดยปกติค่าเริ่มต้นของ Application ของเรา beans ทั้งหมดจะถูกเตรียมใช้งาน โดยการแสกน @Component, etc...
+    จากนั้น spring จะทำการสร้าง instance และทำให้มันพร้อมใช้งาน
+
+    เราสามารถระบุค่าเริ่มต้นให้เป็นแบบ Lazy Initialization ได้ โดย beans จะถูกสร้าง instance ก็ต่อเมื่อ
+        - ต้องใช้ในการ dependencies injection
+        - มีการร้องขอ
+    
+    โดยสามารถเพิ่ม @Lazy annotation ไว้บน class ได้
+    หรือ
+    เราสามารถตั้งค่าใน Application.properties file ได้
+    spring.main.lazy-initialization=true

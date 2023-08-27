@@ -1,0 +1,23 @@
+
+    Bean scopes
+        - scope หมายถึง lifecycle ของ beans
+
+    * ค่าเริ่มต้นของ spring คือ Sigleton
+
+    Sigleton
+         spring จะสร้าง 1 instance ของ bean แล้วเก็บไว้ใน memory จากนั้นทุก ๆ dependencies injection จะชี้ไปที่ bean 
+    เดียวกัน
+
+    * เราสามารถใช้ @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON) เอาไว้บน class ที่เราต้องการได้
+
+    Bean scope
+        > Sigleton [ค่าเริ่มต้น]
+            - สร้าง 1 instance ของ bean เก็บไว้ใน memory
+            - @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
+        > prototype
+            - สร้าง instance ใหม่ทุก ๆ request
+            - @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+        > request 
+            - ใช้ได้แค่ http web request, สร้างขึ้นมาเพื่อ web apps เท่านั้น
+        > session
+            - ใช้ได้แค่ http web session, สร้างขึ้นมาเพื่อ web apps เท่านั้น

@@ -1,0 +1,11 @@
+
+    Configuration bean ด้วย java code
+    
+    มีขั้นตอนดังนี้
+        - สร้าง @Configuration class 
+        - กำหนด @Bean method เพื่อกำหนดค่า bean
+        - ใส่ bean เข้าไปใน controller ของเรา
+
+    Use case @bean
+        - ทำให้ third-party class สามารถใช้งานได้ใน Spring Framework
+        - ถ้าไม่ใช้ จะไม่สามารถเรียกใช้งาน third-party class ได้

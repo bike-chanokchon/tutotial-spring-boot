@@ -1,0 +1,11 @@
+
+	Hibernate
+		เป็น framework ของ java ที่จะบันทึก java object ลงในฐานข้อมูล
+
+	benefit 
+		- จัดการ SQL ระดับต่ำทั้งหมด
+		- จัดการ object to relational mapping (ORM)
+	
+	ORM
+		- ทำหน้าที่ map java object กับฐานข้อมูล
+		- [Java class] <---> Hibernate <---> [Database table]

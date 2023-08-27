@@ -1,0 +1,12 @@
+
+    @Qualifier
+        ใช้ในกรณีที่ interface ที่เราต้องการ inject dependencias มีการสืบทอดไปมากกว่า 1 class ทำให้เกิดความคลุมเคลือว่า
+    สรึปแล้วจะใช้ class ไหนเป็นตัวกำหนดการทำงานให้กับ method โดยเราสามารถระบุ @Qualifier เพื่อบอก spring ว่าจะใช้ class
+    นี้เป็นหลักได้
+
+    ตัวอย่าง
+
+    @Autowired
+    public DemoController(@Qualifier("cricketCoach") Coach theCoach) {
+        myCoach = theCoach;
+    }

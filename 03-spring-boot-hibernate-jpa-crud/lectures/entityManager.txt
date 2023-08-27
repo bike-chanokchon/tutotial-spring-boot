@@ -1,0 +1,4 @@
+
+    Entity manager
+        - เป็น component หลักที่จะสร้าง queries
+        - เกิดมาจาก JPA

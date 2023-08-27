@@ -1,0 +1,22 @@
+
+    Jakatra Persistence API (JPA)
+        - เป็น API มาตรฐานสำหรับ ORM
+        - เป็นเพียงข้อกำหนด
+            - โดยจะกำหนดชุดของ interfaces
+            - ต้องมีการ implementation code ถึงใช้งานได้
+
+    * Entity class
+        - Java class ที่จะ mapping กับตารางในฐานข้อมูล
+
+    * Annotation
+        > @Entity
+            - ใช้บอกว่า class นี้เป็น Entity
+        > @Table
+            - ใช้บอกว่า class นี้ map กับ table อะไร
+        > @Id
+            - ใช้บอกว่า Field นี้เป็น PK
+        > @Column(name="id")
+            - ใช้บอกว่า field นี้ map กับ column อะไรใน table
+            - ไม่จำเป็นต้องใส่ก็ได้ เพราะ java field จะทีชื่อเดียวกับ column ใน db อยู่แล้ว
+        > @GeneratedValue(strategy=GenerationType.IDENTITY)
+            - auto increment

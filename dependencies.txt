@@ -34,6 +34,13 @@
     	- สามารถตั้งค่า user, password ที่จะให้ผู้ใช้ ๆ ได้ใน application.properties
     		- spring.security.user.name=scott
     		- spring.security.user.password=tiger
+
+	MySQL Driver
+		- ทำให้เราสามารถเชื่อมต่อ MySQL ได้
+		- สามารถตั้งค่าการเชื่อต่อเอาไว้ใน application.properties
+			- spring.datasource.url
+			- spring.datasource.username
+			- spring.datasource.password
     				
-    				
-    				
+    Spring Data JPA
+		- ทำหน้าที่ ORM

@@ -1,6 +1,0 @@
-
-    Jakatra Persistence API (JPA)
-        - เป็น API มาตรฐานสำหรับ ORM
-        - เป็นเพียงข้อกำหนด
-            - โดยจะกำหนดชุดของ interfaces
-            - ต้องมีการ implementation code ถึงใช้งานได้

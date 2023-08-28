@@ -24,13 +24,13 @@ public class CruddemoApplication {
 		// Java lambda expression
 		return runner -> {
 			// createStudent(studentDAO);
-			// createMultipleStudent(studentDAO);
+			createMultipleStudent(studentDAO);
 			// readStudent(studentDAO);
 			// queryForStudents(studentDAO);
 			// queryForStudentsByLastName(studentDAO);
 			// updateStudent(studentDAO);
 			// deleteStudent(studentDAO);
-			deleteAllStudents(studentDAO);
+			// deleteAllStudents(studentDAO);
 		};
 	}
 

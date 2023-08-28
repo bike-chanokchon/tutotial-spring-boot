@@ -11,7 +11,17 @@
                 - ไม่มีอะไรเกิดขึ้น
             > create-only
                 - แค่สร้าง database
+            > drop
+                - drop database
             > create
-                - เมื่อ application ทำงาน, hibernate จะ drop table และสร้าง table ใหม่ขึ้นมา
+                - ลบ database table ที่ database สร้างขึ้น
+                - เหมาะสำหรับ in-memory database
+            > create-drop
+                - ลบ database และสร้างใหม้เมื่อเริ้มต้น โดยเมื่อ application ทำงานเสร็จแล้ว จะทำการ drop table
+                - มีประโยชน์สำหรับการทำ
+            > validate
+                - ตรวจสอบ Schema ฐานข้อมูล
+            > update [recommend]
+                - เมื่อมีการเปลี่ยนแปรงของฟิลด์ใหม่ให้กับ entity มันจะจัดการอัพเดทฐานข้อมูลด้วย
 
 

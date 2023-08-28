@@ -1,0 +1,17 @@
+
+    Create database table from java code
+        - JPA/Hibernate จะมีตัวเลือก automagically ในการสร้างฐานข้อมูล
+        - สร้าง table โดยอ้างอิงจาก java code ด้วย JPA/Hibernate annotations
+        - มีประโยชน์ในขั้นการการพัฒนาและทดสอบ
+        - [Java code] -> JPA/Hibernate -> SQL -> Database
+    
+    Configuration (application.properties)
+        - spring.jpa.hibernate.ddl-auto=
+            > none
+                - ไม่มีอะไรเกิดขึ้น
+            > create-only
+                - แค่สร้าง database
+            > create
+                - เมื่อ application ทำงาน, hibernate จะ drop table และสร้าง table ใหม่ขึ้นมา
+
+

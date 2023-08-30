@@ -1,0 +1,14 @@
+
+    Java json data binding
+        - เป็นการแปรง JSON data ให้เป็น java pojo
+        - Spring จะใช้ Jackson project อยู่เบื้องหลังในการแปรง JSON เป็น POJO
+        - จะทำการ call setter ของ Pojo 
+
+    Java pojo to json
+        - เป็นการแปรง Java pojo ไปเป็น JSON data
+        - Spring จะใช้ Jackson เรียกใช้ method getter ของ java pojo
+
+    Spring and Jackson pojo 
+        - เมื่อเราทำการประกาศ Annotation ของ Spring คือ @RestController
+        - spring จะจัดการ Jackson โดยอัตโนมัติ
+        

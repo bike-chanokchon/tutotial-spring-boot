@@ -1,0 +1,5 @@
+
+    Spring development process
+        1. เพิ่ม maven dependencies ที่ spring boot ต้องใช้
+            - spring-boot-starter-web
+        2. สร้าง Spring REST Service ด้วย @RestController

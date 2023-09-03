@@ -1,0 +1,15 @@
+
+    Service layer
+        - คือ later ที่อยู่ระหว่าง controller กับ DAO
+        - controller <-> [service] <-> DAO <-> database (best practice)
+        - ถูกออกแบบมาเพื่อรองรับ business logic หรือ ใช้รวบรวมข้อมูลจากหลายแหล่ง (join table)
+        - Spring จะลงทะเบียน service ให้โดยอัตโนมัติเมื่อประกาศ @Service 
+        - Spring จะทำการแสกน @Component และ @Service นั้นเป็นส่วนหนึ่งของ @Component ทำให้ Spring หา @Service เจอ
+
+    Development process
+        - สร้าง interface ของ service
+        - สร้าง class ที่จะ implements การทำงานของ service
+
+    @Transactional
+        - Apply on service method
+        - ไม่จำเป้ต้องใช้บน DAO methods

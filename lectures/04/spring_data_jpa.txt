@@ -1,0 +1,14 @@
+
+    Spring data JPA
+        - สร้าง DAO ของ entity ฬห้
+        - สร้าง CRUD ให้เรากับเราเองเลย
+        - Spring จัดเตรียม interface ไว้ให้แล้ว คือ JpaRepositoty
+        - มี method มาให้ดังนี้
+            - findAll()
+            - findById()
+            - save()
+            - deleteById()
+    
+    Development process
+        - ขยาย interface ของ JpaRepositoty
+        - ใช้ Repository ใน app ของเรา

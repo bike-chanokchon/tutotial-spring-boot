@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -30,5 +31,18 @@ public class StudentRestController {
     @GetMapping("/students")
     public List<Student> getStudent() {
         return students;
+    }
+
+    // define endpoint of "/student/{studentId}" - return student at index of array
+    // @PathVariable เป็นการดึงค่าจาก path variable โดยชื่อตัวแปรจะต้องตรงกัน
+    @GetMapping("/students/{studentId}")
+    public Student getStudent(@PathVariable int studentId) {
+        // check the studentId again list size
+        if ((studentId >= this.students.size()) || (studentId < 0)) {
+            // custom class exception for student
+            throw new StudentNotFoundException("Student id not found - " + studentId);
+        }
+
+        return this.students.get(studentId);
     }
 }

@@ -1,0 +1,14 @@
+
+    REST API Design
+
+    API Design process
+        - ตรวจสอบความต้องการของ API
+        - ระบุ resouce / entity หลัก ๆ ที่จะใช้
+        - เลือก HTTP Methods ที่จะใช้ดำเนินการกับทรัพยากรณ์นั้น
+
+    FULL CRUD
+        - [GET]     Get a list              /api/controller
+        - [GET]     Get a single by id      /api/controller/{id}
+        - [POST]    Create                  /api/controller
+        - [PUT]     Update                  /api/controller
+        - [DELETE]  Delete                  /api/controller/{id}

@@ -1,0 +1,6 @@
+
+    ขั้นตอนการพัฒนา
+        - สร้าง class สำหรับ error response (StudentErrorResponse)
+        - สร้าง exception class (StudentExceptionNotfound)
+        - แก้ไข REST Service สำหรับ throw exception ถ้าหากเข้าเงื่อนไขที่ไม่ถูกต้อง
+        - เพิ่ม exeption handler ด้วย @ExceptionHandler

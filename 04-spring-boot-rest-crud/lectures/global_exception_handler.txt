@@ -1,0 +1,10 @@
+
+    Global exception handler
+        - โดยปกติใน project ใหญ่ ๆ จะมีอยู่หลาย controller เราจึงจำเป็นต้องทำให้ 1 exception handler สามารถใช้ได้จากหลายที่
+        - โดยเราจะใช้ @ControllerAdvice
+        - Realtime use of AOP
+
+    Development Process
+        - Create new @ControllerAdvice
+        - เปลี่ยนแปรง REST Service โดยลบ exception handler เก่าออก
+        - เพิ่ม exception handler code ลงใน @ControllerAdvice

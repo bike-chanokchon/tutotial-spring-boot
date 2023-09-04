@@ -1,0 +1,14 @@
+
+	- เป็น Java template engine
+	- ใช้ในการสร้าง HTML สำหรับ web apps
+	- file ของ Thymeleaf จะถูกเก็บไว้ใน src/main/resources/templates \
+	- มีนามสกุลไฟล์เป็น .HTML
+	- ในไฟล์ .html สามารถใช้ <html xmlns:th="http://www.thymeleaf.org"> เพื่อเป็นการบอกว่าเราจะใช้ Thymeleaf
+
+	Development Process
+		- เพิ่ม Thymeleaf ไปที่ Maven POM file
+		- พัฒนา Spring MVC Controller
+		- สร้าง Thymeleaf template
+
+	Dependencies
+		- spring-boot-starter-thymeleaf

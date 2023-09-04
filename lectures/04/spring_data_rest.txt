@@ -1,0 +1,18 @@
+
+    Spring data rest
+
+        - เป็นการนำการทำงานใน JpaRepository มาสร้าง Basic API ให้กับเรา
+        - โดย spring data rest จะำการ scan หา JpaRepository ของเราและทำการสร้าง endpoint
+        - โดยจะมี endpoint เหล่านี้มาให้
+            - POST      /controller         create
+            - GET       /controller         read a list of items
+            - GET       /controller/:id     read item by id
+            - PUT       /controller/:id     update item by id
+            - DELETE    /controller/:id     delete item by id
+    
+    Development process
+        - เพิ่ม spring data rest ไปที่ Maven POM file
+        (no coding require)
+        
+    Dependencies
+        - spring-boot-starter-data-rest

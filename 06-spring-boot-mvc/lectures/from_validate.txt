@@ -1,0 +1,20 @@
+
+    From validation
+        - ใน java มี standard bean validation api
+        - Spring boot และ Thymelead สนับสนุน bean validation api
+
+    Bean validate features
+        - required
+        - validate length
+        - validate number
+        - validate with regular expression
+        - custom validate
+
+    Annotation
+        - @NotNull      ข้อมูลต้องไม่ใช่ null
+        - @Min          ข้อมูลจะต้องมีค่าน้อยกว่าตัวเลขที่กำหนด
+        - @Max          ข้อมูลจะต้องมีค่ามากกว่าตัวเลขที่กำหนด
+        - @Size         ขนาดของ string จะต้องตรงกับขนาดที่ระบุไว้
+        - @Pattern      regular expression
+        - @Future       ต้องเป็นวันที่ในอนาคต
+        - @Past         ต้องเป็นวันที่ในอดีต

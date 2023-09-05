@@ -18,3 +18,6 @@
         - @Pattern      regular expression
         - @Future       ต้องเป็นวันที่ในอนาคต
         - @Past         ต้องเป็นวันที่ในอดีต
+    
+    *Model
+        - เป็น class ที่ทำ controller สามารรับ-ส่งข้อมูลจาก view ได้

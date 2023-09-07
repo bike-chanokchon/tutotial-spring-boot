@@ -16,11 +16,11 @@
 
     <!-- action = url for send data -->
     <!-- object = model attribute name -->
-    <form th:action="@{/processForm}" th:object="customer" method="POST">
+    <form th:action="@{/customer/processForm}" th:object="${customer}" method="post">
         <!-- field คือ prop name จาก model customer class -->
         First name: <input type="text" th:field="*{firstName}">
         <br>
-        Last name (*): <input type="text" th:field="${lastName}">
+        Last name (*): <input type="text" th:field="*{lastName}">
 
         <!-- เพิ่ม error message ถ้าหากมี -->
         <!-- thymaleaf สามาถเพิ่มเงื่อนไขได้โดยใช้ th:if{} -->
@@ -31,8 +31,8 @@
             th:errors="*{lastName}"
             class="error"
         ></span>
-
-        <input type="submit" value="Submit">
+        <br>
+        <button type="submit">Submit</button>
     </form>
 </body>
 </html>

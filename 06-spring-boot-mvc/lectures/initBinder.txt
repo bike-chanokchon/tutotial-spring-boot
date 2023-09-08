@@ -1,0 +1,8 @@
+
+    @iniitBinder
+        - ทำหน้าที่เป็น annotation สำหรับบอกว่า ให้ทำงานเรื่องหน้า (Pre-processor)
+        - request อะไรก็ตามที่ผ่าน controller, code ในส่วนนี้จะถูกดำเนินการก่อน
+        - โดย code ที่ถูกดำเนินการนั้นก็คือ method ที่มี annotation @InitBinder
+
+    SpringTrimmerEditor
+        - ตัดและลบช่องว่างออก

@@ -32,6 +32,14 @@
             class="error"
         ></span>
         <br>
+
+        Free passes: <input type="text" th:field="*{freePasses}">
+        <span th:if="${#fields.hasErrors('freePasses')}" th:errors="*{freePasses}" class="error"></span>
+        <br>
+
+        Potal code: <input type="text" th:field="*{postalCode}">
+        <span th:if="${#fields.hasErrors('postalCode')}" th:errors="*{postalCode}" class="error"></span>
+        <br>
         <button type="submit">Submit</button>
     </form>
 </body>

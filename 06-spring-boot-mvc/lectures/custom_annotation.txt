@@ -1,0 +1,23 @@
+
+    Custom Annotation
+
+        > @interface
+            - เป็น Spacial type ของ interface 
+            - ใช้สำหรับ custom annotation
+
+        > @Constraint
+            - ใช้สำหรับสร้าง Annotation validate เอง
+            - @Constraint(validateBy = [class ที่เราใช้เขียนการทำงานของการตรวจสอบ])
+
+        > @Target
+            - ใช้สำหรับระบุว่า สามารถใช้ annotation นี้ได้ที่ไหนบ้าง
+            - @Target({ ElementType.METHOD, ElementType.FIELD })
+
+        > @Retention
+            - ใช้สำหรับบอกว่า Annotation นี้สามารถเห็นในระดับใดได้บ้าง
+            - RetentionPolicy.RINTIME
+                - เก็บ Annotation ไว้ใน byte code ของ java ที่ compile แล้ว
+
+        @CustomAnno(value = "Hello", message = "is required")
+            - public String value() default "";
+            - public String message() default "";

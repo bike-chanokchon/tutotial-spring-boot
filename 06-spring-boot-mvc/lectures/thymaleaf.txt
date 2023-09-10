@@ -12,3 +12,13 @@
 
 	Dependencies
 		- spring-boot-starter-thymeleaf
+
+	Symbols
+		- @	ใช้สำหรับอ้างอิงไปถึง path ใน application ของเรา
+		- $	ใช้เรียก object ที่ถูกส่งมา
+		- *	ใช้เรียนก fields ใน object
+
+	Expression
+		- th:action		ที่อยู่สำหรับส่งข้อมูล
+		- th:object		อ้างอิงไปที่ model attribute
+		- th:field		เชื่อม Input field เข้ากับ prop ของ model attribute

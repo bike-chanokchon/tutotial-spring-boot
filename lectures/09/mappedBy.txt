@@ -1,0 +1,8 @@
+
+	@OneToOne(mappedBy="instructorDetail")
+	private Instructor instructor
+
+		- เป็นการบอกให้ Hibernate มองไปที่ instructorDetail properties ที่อยู่ใน class Instructor
+		- โดยจะใช้ข้อมูลจาก Instructor class ด้วย @JoinColumn เพื่อค้นหา instructor ที่เกี่ยวของกับ instructorDetail
+
+	สามารถเพิ่ม CascadeType ได้

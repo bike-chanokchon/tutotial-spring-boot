@@ -1,0 +1,4 @@
+
+	CascadeType.DETACH
+		- บอกให้ JPA หรือ Hibernate รู้ว่า entity หลักถูกตัดความสัมพันธ์ออกจาก entity อื่น ๆ
+		โดยเมื่อมีการ update entity หลัก จะไม่มีการ update entity ที่เกี่ยวข้อง 

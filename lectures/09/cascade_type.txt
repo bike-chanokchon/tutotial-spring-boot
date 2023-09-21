@@ -1,4 +1,21 @@
+	Cascade
+		- การดำเนินการบางอย่างกับ entity หลัก (parent) จะส่งผลกระทบต่อ entity ที่เกี่ยวข้อง (childg)
+	
+	CascadeType.ALL
+		- ใช้งาน CascadeType ทั้งหมด
+
+	CascadeType.PERSIST
+		- หากสร้าง entity ปัจจุบันขึ้นมาใหม่, entity ที่เกี่ยวข้องจะถูกสร้างขึ้นมาด้วย
+
+	CascadeType.MERGE
+		- หาก entity ปัจจุบันมีการเปลี่ยนแปรง, entity ที่เกี่ยวข้องจะถูกอัพเดทค่าใหม่ด้วย
+
+	CascadeType.REMOVE
+		- หากลบ entity ปัจจุบัน, entity ที่เกี่ยวข้องก็จะถูกลบไปด้วย
 
 	CascadeType.DETACH
 		- บอกให้ JPA หรือ Hibernate รู้ว่า entity หลักถูกตัดความสัมพันธ์ออกจาก entity อื่น ๆ
 		โดยเมื่อมีการ update entity หลัก จะไม่มีการ update entity ที่เกี่ยวข้อง 
+
+	CascadeType.REFRESH
+		- เมื่อ entity parent ถูกโหลดข้อมูลใหม่มาจากฐานข้อมูล entity child จะถูกโหลดข้อมูลให่ด้วยเช่นกัน

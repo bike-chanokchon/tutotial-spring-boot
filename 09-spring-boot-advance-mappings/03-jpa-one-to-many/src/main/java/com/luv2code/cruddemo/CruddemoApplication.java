@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import com.luv2code.cruddemo.dao.AppDAO;
+import com.luv2code.cruddemo.entity.Course;
 import com.luv2code.cruddemo.entity.Instructor;
 import com.luv2code.cruddemo.entity.InstructorDetail;
 
@@ -27,8 +28,49 @@ public class CruddemoApplication {
 			// findInstructor(appDAO);
 			// deleteInstructor(appDAO);
 			// findInstructorDetail(appDAO);
-			removeInstructorDetail(appDAO);
+			// removeInstructorDetail(appDAO);
+			// createInstructorWithCourses(appDAO);
+			findInstructorWithCourses(appDAO);
 		};
+	}
+
+	public void findInstructorWithCourses(AppDAO appDAO) {
+		int instructorId = 2;
+		System.out.println("Finding instructor id: " + instructorId);
+
+		// จะฆลดมาแค่ instructor ไม่โหลด courses มาเพราะ fetch type เป็นแบบ lazy load (default)
+		Instructor instructor = appDAO.findInstructorById(instructorId);
+
+		System.out.println("instructor: " + instructor);
+		System.out.println("courses: " + instructor.getCourses());
+		
+		System.out.println("Done");
+	}
+
+	public void createInstructorWithCourses(AppDAO appDAO) {
+		// create instructor
+		Instructor instructor = new Instructor("Chanokchon", "Wongjampa", "bike.chanokchon2001@gmail.com");
+		
+		// create instructor detail
+		InstructorDetail instructorDetail = new InstructorDetail("http://www.youtube.com", "coding");
+	
+		// associate the objects
+		instructor.setInstructorDetail(instructorDetail);
+
+		// create some courses
+		Course course1 = new Course("Air Guitar - The ultimate guide");
+		Course course2 = new Course("The pinball masterclass");
+
+		// add courses to instructor
+		instructor.add(course1);
+		instructor.add(course2);
+
+		// save instructor
+		// NOTE: this will also save the course
+		// because of CascadeType.PERSIST
+		System.out.println("Saving instructor: " + instructor);
+		System.out.println("The course : " + instructor.getCourses());
+		appDAO.save(instructor);
 	}
 
 	public void removeInstructorDetail(AppDAO appDAO) {

@@ -1,0 +1,24 @@
+
+    Fetch type
+    สำหรับกำหนดว่าข้อมูลจะถูกโหลดเมื่อใดและอย่างไรด้วย Hibernate
+
+    Eager
+        - ดึงข้อมูลทุกอย่างเข้ามา
+        - โดยจะดึงข้อมูลทุก entity ที่เกี่ยวข้องมาทันที
+
+    Lazy
+        - ดึงข้อมูลเมื่อมีการร้องขอเท่านั้น
+        - lazy load จะโหลด main entity เป็นอันดับแรก
+        - จากนั้นค่อยโหลด entity อื่น ๆ ที่ขึ้นต่อกันหรือมีความเกี่ยวข้องกัน
+
+    Best practice
+        - โหลดข้อมูลเมื่อจำเป็นจริง ๆ เท่านั้น เราจึงควรที่จะใช้ Lazy load
+        - โดยสามารถตั้งค่าให้เป็น lazy load ได้โดยใช้ fetch = FetchType.LAZY
+            - ตัวอย่าง @OneToMany(fetch = FetchType.LAZY, mappeBy = "instructor")
+                     private List<Course> courses;
+        - default ของ fetch type 
+            - @OneToOne     Eager
+            - @OneToMany    Lazy 
+            - @ManyToOne    Eager
+            - @ManyToMany   Lazy
+        - การทำ Lazy load เราจำเป็นต้องให้ Hibernate มี session ของการเชื่อมต่อฐานข้อมูลไว้ ไม่งั้นจะเกิด throw an exception

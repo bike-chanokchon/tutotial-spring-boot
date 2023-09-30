@@ -12,6 +12,7 @@ import com.luv2code.cruddemo.entity.Course;
 import com.luv2code.cruddemo.entity.Instructor;
 import com.luv2code.cruddemo.entity.InstructorDetail;
 import com.luv2code.cruddemo.entity.Review;
+import com.luv2code.cruddemo.entity.Student;
 
 @SpringBootApplication
 public class CruddemoApplication {
@@ -27,8 +28,29 @@ public class CruddemoApplication {
 
 		// Java lambda expression
 		return runner -> {
-			
+			createCourseAndStudents(appDAO);
 		};
+	}
+
+	public void createCourseAndStudents(AppDAO appDAO) {
+		// create a course
+		Course course = new Course("Pacman - How to score one million point");
+
+		// create the students
+		Student student1 = new Student("A", "A", "C");
+		Student student2 = new Student("B", "B", "C");
+		Student student3 = new Student("C", "C", "C");
+
+		// add students to course
+		course.addStudent(student1);
+		course.addStudent(student2);
+		course.addStudent(student3);
+
+		// save the course and associated students
+		System.out.println("Saving the course: " + course);
+		System.out.println("associated students: " + course.getStudents());
+	
+		appDAO.save(course);
 	}
 
 	public void deleteCOurseAndReviews(AppDAO appDAO) {

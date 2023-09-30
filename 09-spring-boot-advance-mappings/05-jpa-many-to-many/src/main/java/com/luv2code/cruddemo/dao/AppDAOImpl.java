@@ -48,7 +48,6 @@ public class AppDAOImpl implements AppDAO {
             course.setInstructor(null);
         }
 
-
         if (instructor != null) {
             this.entityManager.remove(instructor);
         }
@@ -63,7 +62,7 @@ public class AppDAOImpl implements AppDAO {
     @Transactional
     public void deleteInstructorDetailById(int id) {
         InstructorDetail instructorDetail = this.findInstructorDetailById(id);
-        
+
         // remove the associated object reference
         // break bi-directional link
         instructorDetail.getInstructor().setInstructorDetail(null);
@@ -76,8 +75,9 @@ public class AppDAOImpl implements AppDAO {
     @Override
     public List<Course> findCoursesByInstructorId(int id) {
         // create query
-        TypedQuery<Course> query = this.entityManager.createQuery("from Course where instructor.id = :data", Course.class);
-        
+        TypedQuery<Course> query = this.entityManager.createQuery("from Course where instructor.id = :data",
+                Course.class);
+
         query.setParameter("data", id);
 
         // execute query
@@ -90,11 +90,12 @@ public class AppDAOImpl implements AppDAO {
     public Instructor findInstructorByIdJoinFetch(int id) {
         // create query
         TypedQuery<Instructor> query = this.entityManager.createQuery(
-            "SELECT i from Instructor i " + 
-            "JOIN FETCH i.courses " + 
-            "JOIN LETCH i.instructorDetail" +
-            "WHERE i.id = :instructorId", Instructor.class);
-    
+                "SELECT i from Instructor i " +
+                        "JOIN FETCH i.courses " +
+                        "JOIN LETCH i.instructorDetail" +
+                        "WHERE i.id = :instructorId",
+                Instructor.class);
+
         query.setParameter("instructorId", id);
 
         return query.getSingleResult();
@@ -139,11 +140,26 @@ public class AppDAOImpl implements AppDAO {
     public Course findCourseAndReviewByCourseId(int courseId) {
         // create query
         TypedQuery<Course> query = this.entityManager.createQuery(
-            "SELECT c from Course c " + 
-            "JOIN FETCH c.reviews " +
-            "WHERE c.id = :data",
-            Course.class
-        );
+                "SELECT c from Course c " +
+                        "JOIN FETCH c.reviews " +
+                        "WHERE c.id = :data",
+                Course.class);
+        query.setParameter("data", courseId);
+
+        // execute query
+        Course course = query.getSingleResult();
+
+        return course;
+    }
+
+    @Override
+    public Course findCourseStudentByCourseId(int courseId) {
+        // create query
+        TypedQuery<Course> query = this.entityManager.createQuery(
+                "SELECT c from Course c " +
+                        "JOIN FETCH c.students " +
+                        "WHERE c.id = :data",
+                Course.class);
         query.setParameter("data", courseId);
 
         // execute query

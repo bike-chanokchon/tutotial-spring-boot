@@ -28,8 +28,19 @@ public class CruddemoApplication {
 
 		// Java lambda expression
 		return runner -> {
-			createCourseAndStudents(appDAO);
+			// createCourseAndStudents(appDAO);
+			findCourseAndStudents(appDAO);
 		};
+	}
+
+	private void findCourseAndStudents(AppDAO appDAO) {
+		int courseId = 10;
+		Course course = appDAO.findCourseByid(courseId);
+
+		System.out.println("Loaded course: " + course);
+		System.out.println("Student: " + course.getStudents());
+
+		System.out.println("Done!");
 	}
 
 	public void createCourseAndStudents(AppDAO appDAO) {

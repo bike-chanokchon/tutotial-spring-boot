@@ -28,8 +28,19 @@ public class CruddemoApplication {
 		// Java lambda expression
 		return runner -> {
 			// createCourseReviews(appDAO);
-			retrieveCourseAndReview(appDAO);
+			// retrieveCourseAndReview(appDAO);
+			deleteCOurseAndReviews(appDAO);
 		};
+	}
+
+	private void deleteCOurseAndReviews(AppDAO appDAO) {
+		int courseId = 10;
+
+		System.out.println("Deleting course id: " + courseId);
+
+		appDAO.deleteCourseById(courseId);
+
+		System.out.println("Done!");
 	}
 
 	public void retrieveCourseAndReview(AppDAO appDAO) {

@@ -1,0 +1,11 @@
+
+	@JoinTable(
+	name = "student_course",
+	joinColumns = @JoinColumn(name = "student_id),
+	inverseJoinColumns = @JoinColumn(name = "course_id)
+	)
+
+	inverseJoinColumns 
+	- เมื่อเรามีความสัมพันแบบ m-m เราจะต้องใช้ @JoinTable เพื่อระบุตารางกลางที่ใช้เก็บความสัมพันของทั้ง 2 entity
+	- @joinColumn ระบุคอลัมน์ที่ใช้ใน Entity ปัจจุบัน
+	- @inverseJoinColumns ระบุคอลัมน์ของอีก entity ที่ใช้ระบุความสัมพัน

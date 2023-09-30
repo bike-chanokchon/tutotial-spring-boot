@@ -27,11 +27,26 @@ public class CruddemoApplication {
 
 		// Java lambda expression
 		return runner -> {
-			createCourseReviews(appDAO);
+			// createCourseReviews(appDAO);
+			retrieveCourseAndReview(appDAO);
 		};
 	}
 
-	private void createCourseReviews(AppDAO appDAO) {
+	public void retrieveCourseAndReview(AppDAO appDAO) {
+		// get the course and reviews
+		int courseId = 10;
+		Course course = appDAO.findCourseAndReviewByCourseId(courseId);
+
+		// print the course
+		System.out.println(course);
+
+		// print the reviews
+		System.out.println(course.getReviews());
+
+		System.out.println("Done!");
+	}
+
+	public void createCourseReviews(AppDAO appDAO) {
 		// create a course
 		Course course = new Course("Pacman - How to score one millian points");
 

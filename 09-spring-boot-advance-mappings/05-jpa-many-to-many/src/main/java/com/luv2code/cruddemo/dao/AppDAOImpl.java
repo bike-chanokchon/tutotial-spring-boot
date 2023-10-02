@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 import com.luv2code.cruddemo.entity.Course;
 import com.luv2code.cruddemo.entity.Instructor;
 import com.luv2code.cruddemo.entity.InstructorDetail;
+import com.luv2code.cruddemo.entity.Student;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;
@@ -166,5 +167,25 @@ public class AppDAOImpl implements AppDAO {
         Course course = query.getSingleResult();
 
         return course;
+    }
+
+    @Override
+    public Student findStudentAndCoursesByStudentId(int id) {
+        // create query
+        TypedQuery<Student> query = this.entityManager.createQuery(
+            "SELECT s FROM Student s " +
+            "JOIN FETCH s.courses " +
+            "WHERE s.id = :data", 
+            Student.class);
+        query.setParameter("data", id);
+
+        // exucute query
+        return query.getSingleResult();
+    }
+
+    @Override
+    @Transactional
+    public void update(Student student) {
+       this.entityManager.merge(student);
     }
 }

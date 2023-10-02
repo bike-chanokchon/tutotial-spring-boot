@@ -29,11 +29,45 @@ public class CruddemoApplication {
 		// Java lambda expression
 		return runner -> {
 			// createCourseAndStudents(appDAO);
-			findCourseAndStudents(appDAO);
+			// findCourseAndStudents(appDAO);
+			// findSudentAndCourses(appDAO);
+			addMoreCoursesForStudent(appDAO);
 		};
 	}
 
-	private void findCourseAndStudents(AppDAO appDAO) {
+	public void addMoreCoursesForStudent(AppDAO appDAO) {
+		int studentId = 2;
+		Student student = appDAO.findStudentAndCoursesByStudentId(studentId);
+	
+		// create more courses
+		Course course1 = new Course("Java basic");
+		Course course2 = new Course("Java intermedia");
+		Course course3 = new Course("Java high level");
+
+		// add course to student
+		student.addCourse(course1);
+		student.addCourse(course2);
+		student.addCourse(course3);
+
+		System.out.println("Updating student: " + student);
+
+		appDAO.update(student);
+
+		System.out.println("Done");
+	}
+
+	public void findSudentAndCourses(AppDAO appDAO) {
+		int studentId = 2;
+
+		Student student = appDAO.findStudentAndCoursesByStudentId(studentId);
+
+		System.out.println("Loaded student: " + student);
+		System.out.println("Courses: " + student.getCourses());
+
+		System.out.println("Done!");
+	}
+
+	public void findCourseAndStudents(AppDAO appDAO) {
 		int courseId = 10;
 		Course course = appDAO.findCourseByid(courseId);
 

@@ -5,6 +5,7 @@ import java.util.List;
 import com.luv2code.cruddemo.entity.Course;
 import com.luv2code.cruddemo.entity.Instructor;
 import com.luv2code.cruddemo.entity.InstructorDetail;
+import com.luv2code.cruddemo.entity.Student;
 
 public interface AppDAO {
     void save(Instructor instructor);
@@ -21,4 +22,6 @@ public interface AppDAO {
     void save(Course course);
     Course findCourseAndReviewByCourseId(int courseId);
     Course findCourseStudentByCourseId(int courseId);
+    Student findStudentAndCoursesByStudentId(int id);
+    void update(Student student);
 }
